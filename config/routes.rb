@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   namespace :admin do
-  get 'dashboard/index'
+    get 'dashboard/index'
+    get '', to: 'dashboard#index', as: '/'
+    get 'sign_in', to: 'sessions#new', as: 'sign_in'
+    post 'sign_in', to: 'sessions#create'
+    delete 'sign_out', to: 'sessions#destroy'
   end
 
   root 'welcome#index'
-
-  namespace :admin do 
-    get '', to: 'dashboard#index', as: '/'
-  end
+  resource :users
+  resource :sessions, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

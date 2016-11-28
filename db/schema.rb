@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110210200) do
+ActiveRecord::Schema.define(version: 20161128191919) do
 
   create_table "beers", force: :cascade do |t|
     t.string  "name"
     t.text    "description"
     t.integer "user_id"
+    t.decimal "abv"
   end
 
   create_table "events", force: :cascade do |t|
@@ -26,7 +27,6 @@ ActiveRecord::Schema.define(version: 20161110210200) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -37,10 +37,10 @@ ActiveRecord::Schema.define(version: 20161110210200) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "admin",                  default: false
-    t.string   "password_digest"
+    t.integer  "beer_id"
+    t.integer  "event_id"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

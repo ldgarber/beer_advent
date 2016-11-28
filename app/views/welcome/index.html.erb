@@ -51,25 +51,47 @@
     </header>
 
     <!-- Today Section -->
-    <section id="today" class="container content-section text-center">
+    <section id="today" class="today-section container content-section text-center">
+<style media="screen">
+.today-section { 
+  background: $grayscale-dark url(../../assets/images/img-0.jpg) no-repeat scroll center center; 
+}
+</style>
+     
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
               <h2>Today's Selection: Day <%= @counter %></h2>
-                <p>Today's beer is the fabulous BEER_NAME.</p>
-                <p>It was selected by PERSON, and it is delicious.</p>
+              <% if @user && @beer %>
+                <p>Today's beer is the fabulous <%= @beer.name %> .</p>
+                <p><%= @beer.description %></p>
+                <p>It was selected by <%= @user.name %>, and it is delicious.</p>
                 <p>Enjoy!</p>
+              <% else %> 
+                <p>No beer today :( Drink yer own!</p> 
+              <% end %> 
+
+              <% if @counter == 24 %>
+                <p>Happy Christmas Eve!!</p>
+              <% end %> 
             </div>
         </div>
     </section>
 
     <!-- Coming Up Section -->
-    <section id="comingup" class="content-section text-center">
+    <section id="comingup" class="text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Coming soon...</h2>
-                    <p>Tomorrow's beer will be selected by <%= @tomorrow.person </p>
+                    <% if @tomorrow_event %> 
+                      <p>Tomorrow's beer will be selected by <%= @tomorrow_user %>. Get ready.</p>
+                  <!-- Cool link you don't really need 
                     <a href="https://github.com/blackfyre/grayscale-sass/" class="btn btn-default btn-lg">Visit the Download Page</a>
+                  --> 
+                    <% else %> 
+                      <p>Nobody signed up for tomorrow, but there's always something to look forward to!<br> 
+                        Check back here tomorrow to see what the future holds. </p> 
+                    <% end %> 
                 </div>
             </div>
         </div>
