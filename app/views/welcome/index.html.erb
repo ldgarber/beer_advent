@@ -54,20 +54,8 @@
     <section id="today" class="today-section container content-section text-center">    
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-              <h2>Today's Selection: Day <%= @counter %></h2>
-              <% if @user && @beer %>
-                <p>Today's beer is the fabulous <%= @beer.name %> .</p>
-                <p><%= @beer.description %></p>
-                <p>It was selected by <%= @user.name %>, and it is delicious.</p>
-                <p>Enjoy!</p>
-              <% else %> 
-                <p>No beer today :( Drink yer own!</p> 
-              <% end %> 
-
-              <% if @counter == 24 %>
-                <p>Happy Christmas Eve!!</p>
-              <% end %> 
-            </div>
+              <%= render "layouts/#{@season}" %> 
+             </div>
         </div>
     </section>
 
