@@ -3,8 +3,8 @@ class WelcomeController < ApplicationController
   def index
     @today = Date.today
     @counter = @today.mday
-    #@season = season(@today)
-    @season = "post_season"
+    @season = season(@today)
+
     if @event = Event.find_by(date: @today) 
       @user = @event.user
       @beer = @event.user.beer
