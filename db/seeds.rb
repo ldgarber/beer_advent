@@ -139,7 +139,4 @@ test = User.create(:name => "Hiiiiii")
 test.event = Event.create(date: date)
 test.beer = beers[5]
 
-date2 = "#{year}-#{month}-30"
-test2 = User.create(:name => "Bro")
-test2.event = Event.create(date: date2)
-test2.beer = beers[12]
+

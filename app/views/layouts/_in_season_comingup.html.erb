@@ -1,0 +1,11 @@
+<h2>Coming soon...</h2>
+<% if @tomorrow_event %> 
+  <p>Tomorrow's beer will be selected by <%= @tomorrow_user.name %>. Get ready.</p>
+<!-- Cool link you don't really need 
+<a href="https://github.com/blackfyre/grayscale-sass/" class="btn btn-default btn-lg">Visit the Download Page</a>
+--> 
+<% else %> 
+  <p>Nobody signed up for tomorrow, but there's always something to look forward to!<br> 
+    Check back here tomorrow to see what the future holds. </p> 
+<% end %> 
+
