@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @today = Date.today
+    @today = Date.today.in_time_zone("Eastern Time (US & Canada)")
     @counter = @today.mday
     @season = season(@today)
 
