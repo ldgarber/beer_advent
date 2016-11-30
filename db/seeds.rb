@@ -134,8 +134,8 @@ end
 
 #test data: 
 month = 11
-date = "#{year}-#{month}-29"
-test = User.create(:name => "Hiiiiii")
+date = "#{year}-#{month}-28"
+test = User.create(:name => "Leah")
 test.event = Event.create(date: date)
 test.beer = beers[5]
 

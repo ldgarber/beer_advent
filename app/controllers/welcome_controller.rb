@@ -1,18 +1,12 @@
 class WelcomeController < ApplicationController
 
   def index
-    @today = Date.today.in_time_zone("Eastern Time (US & Canada)")
+    @today = Date.today
     @counter = @today.mday
     @season = season(@today)
 
-    if @event = Event.find_by(date: @today) 
-      @user = @event.user
-      @beer = @event.user.beer
-    end
-
-    if @tomorrow_event = Event.find_by(date: @today + 1)
-      @tomorrow_user = @tomorrow_event.user
-      @tomorrow_beer = @tomorrow_event.beer
+    @event = Event.find_by(date: @today) 
+    @tomorrow_event = Event.find_by(date: @today + 1.day) 
     end 
   end
 
@@ -20,9 +14,9 @@ class WelcomeController < ApplicationController
   def season(date) 
     if (date >= START_DATE) && (date <= END_DATE)
       return "in_season"
-    else if  date == (START_DATE - 1)
+    else if  date == (START_DATE - 1.day)
       return "pre_season"
-    else if  date == (END_DATE + 1)
+    else if  date == (END_DATE + 1.day)
       return "post_season"
     else
       return "off_season"
@@ -31,4 +25,4 @@ class WelcomeController < ApplicationController
 
 end
 end
-end
+

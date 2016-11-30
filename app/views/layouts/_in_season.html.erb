@@ -1,5 +1,9 @@
+<% @counter = today.mday %> 
+
 <h2>Today's Selection: Day <%= @counter %></h2>
-<% if @user && @beer %>
+<% if event %>
+  <% @beer = event.beer %> 
+  <% @user = event.user %>
   <p>Today's beer is the fabulous <%= @beer.name %> .</p>
   <p><%= @beer.description %></p>
   <p>It was selected by <%= @user.name %>, and it is delicious.</p>

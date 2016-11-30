@@ -54,7 +54,7 @@
     <section id="today" class="today-section container content-section text-center">    
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-              <%= render "layouts/#{@season}" %> 
+              <%= render "layouts/#{@season}", today: @today, event: @event, tomorrow_event: @tomorrow_event %> 
              </div>
         </div>
     </section>
@@ -64,7 +64,7 @@
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                  <%= render "layouts/#{@season}_comingup" %>
+                  <%= render "layouts/#{@season}_comingup", today: @today, event: @event, tomorrow_event: @tomorrow_event %>
                 </div>
             </div>
         </div>
