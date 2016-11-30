@@ -238,9 +238,9 @@ a {
   -o-background-size: cover;
 
   background: #cdc7d3; /* Old browsers */
-  background: -moz-linear-gradient(top,  #cdc7d3 0%, #898989 18%, #000000 81%, #262729 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #cdc7d3 0%,#898989 18%,#000000 81%, #262729 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #cdc7d3 0%,#898989 18%,#000000 81%, #262729 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top,  #cdc7d3 0%, #898989 18%,  #262729 80%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #cdc7d3 0%,#898989 18%, #262729 80%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #cdc7d3 0%,#898989 18%, #262729 80% #262729 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdc7d3', endColorstr='#262729',GradientType=0 ); /* IE6-9 */
 
 }
