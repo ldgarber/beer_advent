@@ -1,3 +1,4 @@
 <h2>Coming soon...</h2>
-  <p>Beer advent starts again in <%= @today - START_DATE %> days</p>
-  <p>Plus, check out some at-a-glance stats of the 2016 beer advent.</p>
+<% days = (START_DATE - @today).to_i %> 
+<p>Beer advent starts in <%= pluralize(days, 'day')%>!!</p>
+
