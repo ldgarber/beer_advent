@@ -80,6 +80,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.1)
+    mixpanel-ruby (2.2.0)
     multi_json (1.12.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
@@ -165,6 +166,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  mixpanel-ruby
   pg
   rails (= 4.2.6)
   sass-rails (~> 5.0)
