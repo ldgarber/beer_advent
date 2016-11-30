@@ -1,4 +1,5 @@
 <h2>Coming soon...</h2>
-<% days = (START_DATE - @today).to_i %> 
+<% @today = Date.today.in_time_zone("Eastern Time (US & Canada)") %>
+<% days = (START_DATE - @today).to_i / 1.day %> 
 <p>Beer advent starts in <%= pluralize(days, 'day')%>!!</p>
 
