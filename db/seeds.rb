@@ -16,7 +16,7 @@ beers = [
   Beer.create(
     name: "Magic Hat Session IPA", 
     abv: 4.5, 
-    description: "A Session IPA tuned to the key of ease with a tropical hop lead and smooth malt bass."
+    description: "A Session IPA tuned to the key of ease with a tropical hop lead and smooth malt base."
   ), 
   Beer.create( 
     name: "Rogue Dead Guy Ale", 
