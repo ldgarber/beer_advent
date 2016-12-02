@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @today = Date.today
+    @today = Date.current
     @counter = @today.mday
     @season = season(@today)
 
