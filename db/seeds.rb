@@ -46,7 +46,7 @@ beers = [
   Beer.create( 
     name: "Southern Tier Old Man Seasonal Ale", 
     abv: 7.5, 
-    description: "A rich marriage of hops and barley to cast light upon the evening and melt your mind out of the snowdrifts. Old Man Winters earthy hue and thickness lace around the glass, inviting you to linger in its warmth and share the spirit of the season with your family and friends."
+    description: "A rich marriage of hops and barley to cast light upon the evening and melt your mind out of the snowdrifts. Old Man Winter's earthy hue and thickness lace around the glass, inviting you to linger in its warmth and share the spirit of the season with your family and friends."
   ), 
   Beer.create( 
     name: "Rogue Santa's Private Reserve Ale", 
